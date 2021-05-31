@@ -1,0 +1,29 @@
+schema {
+    query: Query
+}
+
+type Query {
+    getBranchesfromID(id: ID!): Banks
+    getBranchfromIFSC(ifsc: ID!): Branches
+}
+
+type Banks {
+    id: ID
+    name: String
+    branches: [Branches]
+    success:Boolean!
+    errors:[String]
+}
+
+type Branches {
+    ifsc: ID
+    bank_id: ID
+    branch: String
+    address: String
+    city: String
+    district: String
+    state: String
+    bank: Banks
+    success:Boolean!
+    errors:[String]
+}

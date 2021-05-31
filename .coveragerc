@@ -1,0 +1,5 @@
+[run]
+omit = 
+	tests/*
+    coreAPI/queries.py
+    coreAPI/routes.py
