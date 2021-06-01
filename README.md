@@ -7,9 +7,17 @@ The API uses ariadne, a schema-first approach based python-graphql library which
 to define custom schema for our queries using SDL(Schema Definition Language).
 
 The bank data is saved in a postgres database. The database has been interfaced with python
-using the python-sql-alchemy library.
+using the python-sqlalchemy library.
 
+# Workflow
+* The queries made to "/gql" endpoint are resolved by query resolvers in queries.py
+and the required data is provided to the route resolvers. The route resolvers then
+extract the information depending on the attributes requested and send it bank to 
+the client.
+* In case of any sever side errors, the application responds with appropriate
+log information.
 
+# Installation
 * To install via git
   ```
     venv myenv ---> Create a virtual environment
