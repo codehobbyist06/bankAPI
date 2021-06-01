@@ -3,6 +3,13 @@ This is an API built using python Flask framework to provide an interface
 to the bank data provided by RBI (Reserve bank of India). It supports grapql 
 queries at endpoint ("/gql").  
 
+The API uses ariadne, a schema-first approach based python-graphql library which allows us
+to define custom schema for our queries using SDL(Schema Definition Language).
+
+The bank data is saved in a postgres database. The database has been interfaced with python
+using the python-sql-alchemy library.
+
+
 * To install via git
   ```
     venv myenv ---> Create a virtual environment
@@ -37,9 +44,9 @@ query = """ query getBranchesfromID {
         ifsc
         branch
         address
-    	city
-    	district
-    	state
+      city
+      district
+      state
     }
     errors
   }
