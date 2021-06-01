@@ -54,5 +54,5 @@ query = """ query getBranchfromIFSC {
   }
 } """
 ```
-The application is currently deployed at
+The application is currently deployed at https://bankapp06.herokuapp.com/
 
